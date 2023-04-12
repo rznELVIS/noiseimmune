@@ -7,6 +7,11 @@ class Model:
 	def Go(self, options: Options):
 		print(f'Go modeling')
 
+		i = 0
+		while i < options.count:
+			print(f'Do {i}')
+			i += 1
+
 	@property
 	def name(self):
 		return self.__name

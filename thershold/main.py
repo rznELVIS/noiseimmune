@@ -1,5 +1,5 @@
 from model import Model
-
+from options import Options
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -11,6 +11,8 @@ if __name__ == '__main__':
     print_hi('Lets start....')
 
 model = Model('Пороговый')
-model.Go()
+options = Options()
+options.count = 5
+model.Go(options)
 
 print(f'Hi, {model.name}')

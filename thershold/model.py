@@ -1,8 +1,10 @@
+from options import Options
+
 class Model:
-	def __init__(self, name):
+	def __init__(self, name: str):
 		self.__name = name
 
-	def Go(self):
+	def Go(self, options: Options):
 		print(f'Go modeling')
 
 	@property

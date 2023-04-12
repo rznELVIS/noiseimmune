@@ -9,8 +9,11 @@ class Model:
 
 		i = 0
 		while i < options.count:
-			print(f'Do {i}')
+			self.__doIteration(i)
 			i += 1
+
+	def __doIteration(self, i: int):
+		print(f'Do {i}')
 
 	@property
 	def name(self):

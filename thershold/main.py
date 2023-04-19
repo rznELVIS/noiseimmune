@@ -1,14 +1,14 @@
 from model import Model
 from options import Options
+import sys
+import os
 
 def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+    print(f'Hi, {name}')
 
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('Lets start....')
+    # sys.path.append(os.path.join(sys.path[0], '../../modules'))
+    print_hi(len(sys.path))
 
 model = Model('Пороговый')
 options = Options()

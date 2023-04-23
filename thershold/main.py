@@ -1,9 +1,9 @@
 # from model import Model
 import sys
+from pathlib import Path
 import os
 
-sys.path.append('/Users/dmitriidemidov/Desktop/Private/python/noiseimmune/modeling')
-print(sys.path[6])
+sys.path.append(str(Path(__file__).parents[1].joinpath('modeling')))
 
 from model import Model
 from options import Options

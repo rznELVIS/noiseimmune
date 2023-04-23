@@ -1,14 +1,16 @@
-from model import Model
-from options import Options
+# from model import Model
 import sys
 import os
 
-def print_hi(name):
-    print(f'Hi, {name}')
+sys.path.append('/Users/dmitriidemidov/Desktop/Private/python/noiseimmune/modeling')
+print(sys.path[6])
+
+from model import Model
+from options import Options
 
 if __name__ == '__main__':
     # sys.path.append(os.path.join(sys.path[0], '../../modules'))
-    print_hi(len(sys.path))
+    print(len(sys.path))
 
 model = Model('Пороговый')
 options = Options()
@@ -16,3 +18,5 @@ options.count = 5
 model.Go(options)
 
 print(f'Hi, {model.name}')
+
+print(len(sys.path))

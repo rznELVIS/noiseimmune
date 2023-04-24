@@ -2,7 +2,7 @@ import unittest
 from model import Model
 
 class TestModel(unittest.TestCase):
-    def test_nameIsSet(self):
+    def test_name_is_set_as_in_constructor(self):
         model = Model('тестовое имя')
         self.assertEqual(model.name, 'тестовое имя')
 

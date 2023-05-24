@@ -1,5 +1,5 @@
 import random
-from generators.RandomGenerator import RandomGenerator
+from generators.randomGenerator import RandomGenerator
 
 
 class UniformDistributionGenerator(RandomGenerator):

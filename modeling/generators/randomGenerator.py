@@ -17,7 +17,7 @@ class RandomGenerator(ABC):
     """
     Генерация слова, указанной длинны, состоящего из значений 0 или 1.
     """
-    def generate_message(self, length: int):
+    def generateMessage(self, length: int):
         message: list[int] = []
 
         for i in range(0,  length):

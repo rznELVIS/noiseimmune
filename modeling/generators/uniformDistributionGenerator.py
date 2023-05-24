@@ -9,4 +9,4 @@ class UniformDistributionGenerator(RandomGenerator):
         if value > 0.5:
             return 1
 
-        return 0;
+        return 0

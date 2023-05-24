@@ -1,8 +1,11 @@
-from RandomGenerator import RandomGenerator
+import random
+from generators.RandomGenerator import RandomGenerator
 
 class UniformDistributionGenerator(RandomGenerator):
     def Generate(self):
-        pass
+        value: float = random.random()
 
-    def GenerateMethod(self, i: int):
-        pass
+        if value > 0.5:
+            return 1
+
+        return 0;

@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+
 """
 Базовый класс генераторов случайных слов.
 """
@@ -13,6 +14,11 @@ class RandomGenerator(ABC):
     """
     Генерация слова, указанной длинны, состоящего из значений 0 или 1.
     """
-    @abstractmethod
-    def GenerateMethod(self, i: int):
-        pass
+    def GenerateMethod(self, length: int):
+        message: list[int] = []
+
+        for i in range(0,  length):
+            value = self.Generate()
+            message.append(value)
+
+        return message

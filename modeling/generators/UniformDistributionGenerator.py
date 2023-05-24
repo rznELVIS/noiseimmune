@@ -1,8 +1,9 @@
 import random
 from generators.RandomGenerator import RandomGenerator
 
+
 class UniformDistributionGenerator(RandomGenerator):
-    def Generate(self):
+    def generate(self):
         value: float = random.random()
 
         if value > 0.5:

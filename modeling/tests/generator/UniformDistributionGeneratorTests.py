@@ -1,15 +1,17 @@
 import unittest
 from generators.UniformDistributionGenerator import UniformDistributionGenerator
+from parameterized import parameterized
 
-
-class TestUniformDistributionGenerator(unittest.TestCase):
-    def test_message_length_is_set_correctly(self):
-        # arrange
-        message_length: int = 10
-
+class UniformDistributionGeneratorTests(unittest.TestCase):
+    @parameterized.expand([
+        [10],
+        [1],
+        [0],
+    ])
+    def test_generate_message_message_length_is_set_correctly(self, message_length: int):
         # act
         generator: UniformDistributionGenerator = UniformDistributionGenerator()
-        message = generator.GenerateMethod(message_length)
+        message = generator.generate_message(message_length)
 
         # assert
         self.assertEqual(len(message),
@@ -17,13 +19,13 @@ class TestUniformDistributionGenerator(unittest.TestCase):
                          'Сгененированное сообщение в {name}.py имеет не корректную длинну.'
                                     .format(name=UniformDistributionGenerator.__name__))
 
-    def test_message_contains_only_0_or_1(self):
+    def test_generate_message_message_contains_only_0_or_1(self):
         # arrange
         message_length: int = 15
 
         # act
         generator: UniformDistributionGenerator = UniformDistributionGenerator()
-        message = generator.GenerateMethod(message_length)
+        message = generator.generate_message(message_length)
 
         # assert
         for value in message:

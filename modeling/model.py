@@ -1,5 +1,11 @@
 from options import Options
 
+
+'''
+Стандартная модель передачи цифровых данных
+'''
+
+
 class Model:
 	def __init__(self, name: str):
 		self.__name = name

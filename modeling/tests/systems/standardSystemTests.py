@@ -1,10 +1,10 @@
 import unittest
-from model import Model
+from systems.standardSystem import StandardSystem
 
 
-class ModelTests(unittest.TestCase):
+class StandardSystemTests(unittest.TestCase):
     def test_name_is_set_as_in_constructor(self):
-        model = Model('тестовое имя')
+        model: StandardSystem = StandardSystem('тестовое имя')
         self.assertEqual(model.name, 'тестовое имя')
 
 

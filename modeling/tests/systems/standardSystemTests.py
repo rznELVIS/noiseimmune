@@ -1,11 +1,19 @@
 import unittest
+from parameterized import parameterized
 from systems.standardSystem import StandardSystem
 
 
 class StandardSystemTests(unittest.TestCase):
-    def test_name_is_set_as_in_constructor(self):
-        model: StandardSystem = StandardSystem('тестовое имя')
-        self.assertEqual(model.name, 'тестовое имя')
+    @parameterized.expand([
+        ["name"],
+        ["1"],
+    ])
+    def test_name_is_set_as_in_constructor(self, name: str):
+        # act
+        model: StandardSystem = StandardSystem(name)
+
+        # assert
+        self.assertEqual(model.name, name)
 
 
 # Executing the tests in the above test case class

@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from infrastructure.options import Options
 
 """
 Базовый класс стандартная модели передачи цифровых данных
@@ -17,3 +18,7 @@ class DataSystem(ABC):
     @abstractmethod
     def _doIteration(self, i: int):
         pass
+
+    def go(self, options: Options):
+        for i in range(0, options.count):
+            self._doIteration(i)

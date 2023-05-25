@@ -3,14 +3,14 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).parents[1].joinpath('modeling')))
 
-from model import Model
-from options import Options
+#from model import Model
+from infrastructure.options import Options
 
-model = Model('Пороговый')
+#model = Model('Пороговый')
 options = Options()
 options.count = 5
-model.Go(options)
+#model.Go(options)
 
-print(f'Hi, {model.name}')
+#print(f'Hi, {model.name}')
 
 print(len(sys.path))

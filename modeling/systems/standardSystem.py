@@ -1,4 +1,5 @@
-from infrastructure.options import Options
+from generators.randomGenerator import RandomGenerator
+from generators.uniformDistributionGenerator import UniformDistributionGenerator
 from systems.dataSystem import DataSystem
 
 
@@ -13,3 +14,7 @@ class StandardSystem(DataSystem):
 
 	def _doIteration(self, i: int):
 		pass
+
+	def _getGenerator(self) -> RandomGenerator:
+		generator: UniformDistributionGenerator = UniformDistributionGenerator()
+		return generator

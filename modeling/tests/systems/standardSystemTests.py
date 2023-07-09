@@ -1,8 +1,12 @@
+import sys
+from pathlib import Path
 import unittest
-from infrastructure.options import Options
 from parameterized import parameterized
-from systems.standardSystem import StandardSystem
 
+sys.path.append(str(Path(__file__).parents[1].joinpath('modeling')))
+
+from infrastructure.options import Options
+from systems.standardSystem import StandardSystem
 
 class StandardSystemTests(unittest.TestCase):
     @parameterized.expand([

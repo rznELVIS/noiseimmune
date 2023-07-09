@@ -1,8 +1,7 @@
 from abc import ABC, abstractmethod
-
-from generators.randomGenerator import RandomGenerator
-from infrastructure.options import Options
-from infrastructure.results import Results
+from ..generators.randomGenerator import RandomGenerator
+from ..infrastructure.options import Options
+from ..infrastructure.results import Results
 
 """
 Базовый класс стандартная модели передачи цифровых данных

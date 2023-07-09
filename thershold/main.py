@@ -1,7 +1,8 @@
 import sys
 from pathlib import Path
 
-sys.path.append(str(Path(__file__).parents[1].joinpath('modeling')))
+# sys.path.append(str(Path(__file__).parents[1].joinpath('modeling'))
+sys.path.append('../modeling')
 
 #from model import Model
 from infrastructure.options import Options

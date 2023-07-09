@@ -1,7 +1,6 @@
 import unittest
-from generators.uniformDistributionGenerator import UniformDistributionGenerator
 from parameterized import parameterized
-
+from generators.uniformDistributionGenerator import UniformDistributionGenerator
 
 class UniformDistributionGeneratorTests(unittest.TestCase):
     @parameterized.expand([

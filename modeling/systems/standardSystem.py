@@ -1,12 +1,10 @@
-from generators.randomGenerator import RandomGenerator
-from generators.uniformDistributionGenerator import UniformDistributionGenerator
-from systems.dataSystem import DataSystem
-
+from ..generators.randomGenerator import RandomGenerator
+from ..generators.uniformDistributionGenerator import UniformDistributionGenerator
+from ..systems.dataSystem import DataSystem
 
 '''
 Стандартная модель передачи цифровых данных
 '''
-
 
 class StandardSystem(DataSystem):
 	def __init__(self, name: str):
